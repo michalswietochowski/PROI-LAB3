@@ -9,8 +9,11 @@
 
 #include "MapElement.h"
 
-class Entrance {
-
+class Entrance: public MapElement {
+public:
+    Entrance(int x, int y): MapElement(x, y) {
+        symbol = 'S';
+    };
 };
 
 

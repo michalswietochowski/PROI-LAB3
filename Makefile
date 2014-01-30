@@ -20,7 +20,7 @@ TARGET=$(BINDIR)/td
 
 # settings
 CXXFLAGS=-g
-SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/CLI.cpp $(SRCDIR)/Map.cpp $(SRCDIR)/MapElement.cpp $(SRCDIR)/Enemy.cpp $(SRCDIR)/Entrance.cpp $(SRCDIR)/Exit.cpp $(SRCDIR)/Turret.cpp $(SRCDIR)/Wall.cpp
+SOURCES=$(SRCDIR)/*.cpp
 
 all: $(TARGET)
 

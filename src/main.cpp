@@ -10,16 +10,15 @@
  */
 
 #include <iostream>
-#include "Map.h"
-#include "CLI.h"
+#include "Level1.h"
+#include "Game.h"
 
 using namespace std;
 
 int main(int argc, char *argv[]) {
-    const unsigned int MAP_WIDTH = 16;
-    const unsigned int MAP_HEIGHT = 12;
-    Map map(MAP_WIDTH, MAP_HEIGHT);
-    CLI cli(map);
-    cli.showMenu();
+    Level1 level1("Level 1");
+    Game game;
+    game.addLevel(level1);
+    game.start();
     return 0;
 }

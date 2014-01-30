@@ -9,8 +9,16 @@
 
 #include "MapElement.h"
 
-class Wall: public MapElement {
+class Wall : public MapElement {
+protected:
+    char symbol;
+public:
+    Wall(int x, int y): MapElement(x, y) {
+        symbol = '|';
+    };
 
+    Wall(char symbol, int x, int y): symbol(symbol), MapElement(x, y) {
+    };
 };
 
 

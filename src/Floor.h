@@ -4,17 +4,17 @@
 //
 
 
-#ifndef __Exit_H_
-#define __Exit_H_
+#ifndef __Floor_H_
+#define __Floor_H_
 
 #include "MapElement.h"
 
-class Exit: public MapElement {
+class Floor : public MapElement {
 public:
-    Exit(int x, int y): MapElement(x, y) {
-        symbol = 'E';
+    Floor(int x, int y): MapElement(x, y) {
+        symbol = ' ';
     };
 };
 
 
-#endif //__Exit_H_
+#endif //__Floor_H_

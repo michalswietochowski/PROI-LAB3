@@ -9,7 +9,38 @@
 
 
 class MapElement {
+protected:
+    char symbol;
+    int x;
+    int y;
+public:
+    MapElement() {};
+    MapElement(int x, int y): x(x), y(y) {
+    };
 
+    char getSymbol() const {
+        return symbol;
+    }
+
+    void setSymbol(char symbol) {
+        MapElement::symbol = symbol;
+    }
+
+    int getX() const {
+        return x;
+    }
+
+    void setX(int x) {
+        MapElement::x = x;
+    }
+
+    int getY() const {
+        return y;
+    }
+
+    void setY(int y) {
+        MapElement::y = y;
+    }
 };
 
 

@@ -9,8 +9,11 @@
 
 #include "MapElement.h"
 
-class Turret: public MapElement {
-
+class Turret : public MapElement {
+public:
+    Turret(int x, int y): MapElement(x, y) {
+        symbol = 'T';
+    };
 };
 
 
