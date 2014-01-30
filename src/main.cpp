@@ -1,18 +1,25 @@
-//
-//  main.cpp
-//  PROI-LAB3
-//
-//  Created by Michał Świętochowski on 30.01.2014.
-//  Copyright (c) 2014 Michal Swietochowski. All rights reserved.
-//
+/**
+ * Warsaw University of Technology
+ * The Faculty of Electronics and Information Technology
+ *
+ * Object-Oriented Programming Lab 3 - Tower Defense
+ *
+ * Main file
+ *
+ * @author Michal Swietochowski 
+ */
 
 #include <iostream>
+#include "Map.h"
+#include "CLI.h"
 
-int main(int argc, const char * argv[])
-{
+using namespace std;
 
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main(int argc, char *argv[]) {
+    const unsigned int MAP_WIDTH = 16;
+    const unsigned int MAP_HEIGHT = 12;
+    Map map(MAP_WIDTH, MAP_HEIGHT);
+    CLI cli(map);
+    cli.showMenu();
     return 0;
 }
-

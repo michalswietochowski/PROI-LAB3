@@ -9,6 +9,14 @@
 /* Begin PBXBuildFile section */
 		90205F68189A811700B117A8 /* Makefile in Sources */ = {isa = PBXBuildFile; fileRef = 90205F66189A811700B117A8 /* Makefile */; };
 		9021DF60189A80D6004DF0D7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9021DF5F189A80D6004DF0D7 /* main.cpp */; };
+		BFF6713C8889D81816CA5B20 /* Enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF67B8FC377CF205A5B8BA4 /* Enemy.cpp */; };
+		BFF6717E193E7E3AFE09C938 /* Map.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF674A2A42B8AD57679B6AA /* Map.cpp */; };
+		BFF671D0F7C44CA987F272F5 /* Turret.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF67D4A90D79DC60A511A46 /* Turret.cpp */; };
+		BFF6736533BB4C4195009EB9 /* Wall.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF67BC1388B30ED1108F92C /* Wall.cpp */; };
+		BFF674530D9C8E22E03FB7E1 /* CLI.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF6725000F05F664DD69410 /* CLI.cpp */; };
+		BFF67799C235233539214A2D /* Exit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF678E08E227025FE208292 /* Exit.cpp */; };
+		BFF679C7776AF6C46F5685A1 /* Entrance.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF67DBA01C3883E095DD0FF /* Entrance.cpp */; };
+		BFF67C24150BAE03E192330A /* MapElement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BFF67C3A5719883BC64214D0 /* MapElement.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,6 +35,22 @@
 		90205F66189A811700B117A8 /* Makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = Makefile; sourceTree = "<group>"; };
 		90205F67189A811700B117A8 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		9021DF5F189A80D6004DF0D7 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		BFF6713550FBF185AB88387C /* Wall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Wall.h; sourceTree = "<group>"; };
+		BFF6725000F05F664DD69410 /* CLI.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CLI.cpp; sourceTree = "<group>"; };
+		BFF672EF1A75EC56F1A836B4 /* CLI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CLI.h; sourceTree = "<group>"; };
+		BFF674A2A42B8AD57679B6AA /* Map.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Map.cpp; sourceTree = "<group>"; };
+		BFF674C938EE6A99A4FC1832 /* Map.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Map.h; sourceTree = "<group>"; };
+		BFF6769FD9E12C7BB625C462 /* MapElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapElement.h; sourceTree = "<group>"; };
+		BFF678E08E227025FE208292 /* Exit.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Exit.cpp; sourceTree = "<group>"; };
+		BFF67A0DF9418B7DDBC9A755 /* Turret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Turret.h; sourceTree = "<group>"; };
+		BFF67B8FC377CF205A5B8BA4 /* Enemy.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Enemy.cpp; sourceTree = "<group>"; };
+		BFF67BC1388B30ED1108F92C /* Wall.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Wall.cpp; sourceTree = "<group>"; };
+		BFF67C3A5719883BC64214D0 /* MapElement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MapElement.cpp; sourceTree = "<group>"; };
+		BFF67D4A90D79DC60A511A46 /* Turret.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Turret.cpp; sourceTree = "<group>"; };
+		BFF67DBA01C3883E095DD0FF /* Entrance.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Entrance.cpp; sourceTree = "<group>"; };
+		BFF67E5D44C3B2A6ACBA12E1 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		BFF67E7F93BC7C7217F6D45B /* Exit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exit.h; sourceTree = "<group>"; };
+		BFF67EAD83B472E703DE8180 /* Entrance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entrance.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +77,22 @@
 			isa = PBXGroup;
 			children = (
 				9021DF5F189A80D6004DF0D7 /* main.cpp */,
+				BFF6725000F05F664DD69410 /* CLI.cpp */,
+				BFF672EF1A75EC56F1A836B4 /* CLI.h */,
+				BFF674A2A42B8AD57679B6AA /* Map.cpp */,
+				BFF674C938EE6A99A4FC1832 /* Map.h */,
+				BFF67C3A5719883BC64214D0 /* MapElement.cpp */,
+				BFF6769FD9E12C7BB625C462 /* MapElement.h */,
+				BFF67BC1388B30ED1108F92C /* Wall.cpp */,
+				BFF6713550FBF185AB88387C /* Wall.h */,
+				BFF67D4A90D79DC60A511A46 /* Turret.cpp */,
+				BFF67A0DF9418B7DDBC9A755 /* Turret.h */,
+				BFF67DBA01C3883E095DD0FF /* Entrance.cpp */,
+				BFF67EAD83B472E703DE8180 /* Entrance.h */,
+				BFF678E08E227025FE208292 /* Exit.cpp */,
+				BFF67E7F93BC7C7217F6D45B /* Exit.h */,
+				BFF67B8FC377CF205A5B8BA4 /* Enemy.cpp */,
+				BFF67E5D44C3B2A6ACBA12E1 /* Enemy.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -108,6 +148,14 @@
 			files = (
 				90205F68189A811700B117A8 /* Makefile in Sources */,
 				9021DF60189A80D6004DF0D7 /* main.cpp in Sources */,
+				BFF674530D9C8E22E03FB7E1 /* CLI.cpp in Sources */,
+				BFF6717E193E7E3AFE09C938 /* Map.cpp in Sources */,
+				BFF67C24150BAE03E192330A /* MapElement.cpp in Sources */,
+				BFF6736533BB4C4195009EB9 /* Wall.cpp in Sources */,
+				BFF671D0F7C44CA987F272F5 /* Turret.cpp in Sources */,
+				BFF679C7776AF6C46F5685A1 /* Entrance.cpp in Sources */,
+				BFF67799C235233539214A2D /* Exit.cpp in Sources */,
+				BFF6713C8889D81816CA5B20 /* Enemy.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

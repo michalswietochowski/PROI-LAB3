@@ -1,7 +1,7 @@
 # Warsaw University of Technology
 # The Faculty of Electronics and Information Technology
 #
-# Object-Oriented Programming Lab 2 - Abstract Buffer
+# Object-Oriented Programming Lab 3 - Tower Defense
 #
 # Makefile
 #
@@ -16,11 +16,11 @@ BUILDDIR=build
 SRCDIR=src
 
 # target
-TARGET=$(BINDIR)/buf
+TARGET=$(BINDIR)/td
 
 # settings
 CXXFLAGS=-g
-SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/BuffersTest.cpp
+SOURCES=$(SRCDIR)/main.cpp $(SRCDIR)/CLI.cpp $(SRCDIR)/Map.cpp $(SRCDIR)/MapElement.cpp $(SRCDIR)/Enemy.cpp $(SRCDIR)/Entrance.cpp $(SRCDIR)/Exit.cpp $(SRCDIR)/Turret.cpp $(SRCDIR)/Wall.cpp
 
 all: $(TARGET)
 
