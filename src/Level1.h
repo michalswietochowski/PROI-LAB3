@@ -16,6 +16,7 @@ public:
     }
     ~Level1();
     void setupLevel();
+    void resetLevel();
 };
 
 

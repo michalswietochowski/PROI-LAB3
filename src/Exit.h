@@ -12,7 +12,7 @@
 class Exit: public MapElement {
 public:
     Exit(int x, int y): MapElement(x, y) {
-        symbol = 'E';
+        symbol = "|E|";
     };
 };
 

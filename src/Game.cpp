@@ -5,6 +5,7 @@
 
 #include <iostream>
 #include "Game.h"
+#include "Level1.h"
 
 /**
  * Runs loop showing menu and asking for choice
@@ -35,7 +36,7 @@ void Game::start()
                     choice = choice - 48;
                     if (choice > 0 && choice <= levelsCount) {
                         setCurrentLevel(&levels[choice - 1]);
-                        halfdelay(5);
+                        halfdelay(1);
                         clear();
                     }
                     break;
@@ -44,8 +45,12 @@ void Game::start()
             printw("Esc - Return to menu\n\n");
             currentLevel->draw();
             choice = getch();
+            if (currentLevel->isFinished()) {
+                choice = 27;
+            }
             switch (choice) {
                 case 27:
+                    getCurrentLevel()->resetLevel();
                     setCurrentLevel(NULL);
                     halfdelay(255);
                     choice = -1;
@@ -54,17 +59,6 @@ void Game::start()
             }
         }
     } while (choice);
-}
-
-/**
- * Clears console screen
- * @return void
- */
-void Game::clearScreen()
-{
-    for (int i = 0; i < 60; i++) {
-        cout << endl;
-    }
 }
 
 void Game::addLevel(Level &level) {

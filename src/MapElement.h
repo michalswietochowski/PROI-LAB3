@@ -7,10 +7,13 @@
 #ifndef __MapElement_H_
 #define __MapElement_H_
 
+#include <string>
+
+using namespace std;
 
 class MapElement {
 protected:
-    char symbol;
+    string symbol;
     int x;
     int y;
 public:
@@ -18,7 +21,7 @@ public:
     MapElement(int x, int y): x(x), y(y) {
     };
 
-    char getSymbol() const {
+    string getSymbol() const {
         return symbol;
     }
 

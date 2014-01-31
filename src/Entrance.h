@@ -12,7 +12,7 @@
 class Entrance: public MapElement {
 public:
     Entrance(int x, int y): MapElement(x, y) {
-        symbol = 'S';
+        symbol = "|S|";
     };
 };
 

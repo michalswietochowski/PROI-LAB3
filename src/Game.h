@@ -36,22 +36,10 @@ public:
     }
 
     /**
-     * Clears console screen
-     * @return void
-     */
-    void clearScreen();
-
-    /**
      * Runs loop showing menu and asking for choice
      * @return void
      */
     void start();
-
-    /**
-     * Prints prompt to press ENTER key and waits
-     * @return void
-     */
-    void wait();
 };
 
 

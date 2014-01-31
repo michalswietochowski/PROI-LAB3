@@ -6,18 +6,48 @@
 #include "Level1.h"
 
 void Level1::setupLevel() {
-    const unsigned int MAP_WIDTH = 60;
-    const unsigned int MAP_HEIGHT = 20;
+    enemyCount = 20;
+
+    const unsigned int MAP_WIDTH = 64;
+    const unsigned int MAP_HEIGHT = 24;
 
     map = new Map(MAP_WIDTH, MAP_HEIGHT);
 
-    Entrance entrance(19, 2);
+    int xs = 2, ys = MAP_HEIGHT - 1;
+    int xe = MAP_WIDTH - 6, ye = 0;
+
+    Entrance entrance(xs, ys);
     map->addElement(entrance);
 
-    Exit exit(0, 45);
+    Exit exit(xe, ye);
     map->addElement(exit);
+
+    int x = xs + 1, y = ys - 1;
+    ye++;
+
+    //fill random path between start and end
+    do {
+        map->addPathElement(x, y);
+
+        if (x == xe) {
+            y--;
+        } else if (y == ye) {
+            x++;
+        } else if (rand() % 3 == 0) {
+            y--;
+        } else {
+            x++;
+        }
+    } while (x <= xe && y >= ye);
 }
 
 Level1::~Level1() {
     delete map;
+}
+
+void Level1::resetLevel() {
+    Level::resetLevel();
+    enemyCount = 20;
+    delete map;
+    setupLevel();
 }

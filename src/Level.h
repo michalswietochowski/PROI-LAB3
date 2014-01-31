@@ -12,12 +12,11 @@
 #include <cstdio>
 #include <iostream>
 #include "Map.h"
-#include "Enemy.h"
+#include "Tank.h"
 #include "Entrance.h"
 #include "Exit.h"
 #include "MapElement.h"
 #include "Turret.h"
-#include "Wall.h"
 
 using namespace std;
 
@@ -29,7 +28,9 @@ protected:
     Map *map;
 public:
     Level() {};
-    Level(string name): name(name) { };
+    Level(string name): name(name) {
+        levelTime = 0;
+    };
 
     string getName() { return name; };
 
@@ -60,6 +61,10 @@ public:
     void setLevelTime(int levelTime) {
         Level::levelTime = levelTime;
     }
+
+    virtual void resetLevel();
+
+    bool isFinished();
 
     void draw();
 };
