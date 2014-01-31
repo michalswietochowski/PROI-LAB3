@@ -7,7 +7,8 @@
 #ifndef __Map_H_
 #define __Map_H_
 
-#include <map>
+#include <vector>
+#include <ncurses.h>
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
@@ -20,30 +21,21 @@ using namespace std;
 class Map {
     int width;
     int height;
-    map<int, map<int, MapElement> > elements;
+    vector<MapElement> elements;
+    WINDOW *mapWindow;
 public:
     Map(int width, int height): width(width), height(height) {
-        for (int i = 0; i < width; i++) {
-            for (int j = 0; j < height; j++) {
-                Floor floor(i, j);
-                addElement(floor);
-            }
-        }
+        mapWindow = newwin(height, width, 5, 5);
     };
+    ~Map() {
+        wborder(mapWindow, ' ', ' ', ' ',' ',' ',' ',' ',' ');
+        wrefresh(mapWindow);
+        delwin(mapWindow);
+    }
 
     void addElement(MapElement &element);
 
-    string toString();
-
-    /**
-     * Shorthand for toString() method
-     * @param ostream output
-     * @param Map& map
-     * @return ostream&
-     */
-    friend ostream &operator <<(ostream &output, Map &map) {
-        return output << map.toString();
-    }
+    void draw();
 };
 
 

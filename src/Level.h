@@ -7,6 +7,7 @@
 #ifndef __Level_H_
 #define __Level_H_
 
+#include <ncurses.h>
 #include <cstdlib>
 #include <cstdio>
 #include <iostream>
@@ -60,17 +61,7 @@ public:
         Level::levelTime = levelTime;
     }
 
-    string toString();
-
-    /**
-     * Shorthand for toString() method
-     * @param ostream output
-     * @param Level& level
-     * @return ostream&
-     */
-    friend ostream &operator <<(ostream &output, Level &level) {
-        return output << level.toString();
-    }
+    void draw();
 };
 
 

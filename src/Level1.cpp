@@ -6,18 +6,16 @@
 #include "Level1.h"
 
 void Level1::setupLevel() {
-    const unsigned int MAP_WIDTH = 16;
-    const unsigned int MAP_HEIGHT = 12;
+    const unsigned int MAP_WIDTH = 60;
+    const unsigned int MAP_HEIGHT = 20;
 
     map = new Map(MAP_WIDTH, MAP_HEIGHT);
 
-    Entrance entrance(2, 11);
+    Entrance entrance(19, 2);
     map->addElement(entrance);
 
-    Exit exit(3, 0);
+    Exit exit(0, 45);
     map->addElement(exit);
-
-    cout << map << endl;
 }
 
 Level1::~Level1() {

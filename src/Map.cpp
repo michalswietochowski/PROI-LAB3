@@ -6,19 +6,17 @@
 #include "Map.h"
 
 void Map::addElement(MapElement &element) {
-    elements[element.getX()][element.getY()] = element;
+    elements.push_back(element);
 }
 
-string Map::toString() {
-    string mapString = "";
-    for (int i = 0; i < width; i++) {
-        for (int j = 0; j < height; j++) {
-            stringstream ss;
-            string s;
-            ss << elements[i][j].getSymbol();
-            ss >> s;
-            mapString.append(s);
-        }
+void Map::draw() {
+    int elementsCount = elements.size();
+    int offsetX = 5, offsetY = 5;
+
+    for (int i = 0; i < elementsCount; i++) {
+        mvaddch(elements[i].getX() + offsetX, elements[i].getY() + offsetY, elements[i].getSymbol());
     }
-    return mapString;
+
+    box(mapWindow, 0, 0);
+    wrefresh(mapWindow);
 }

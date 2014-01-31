@@ -5,9 +5,6 @@
 
 #include "Level.h"
 
-string Level::toString() {
-    string returnValue = getName();
-    returnValue.append("\n");
-    returnValue.append(map->toString());
-    return returnValue;
+void Level::draw() {
+    map->draw();
 }

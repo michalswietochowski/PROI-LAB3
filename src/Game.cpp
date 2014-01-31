@@ -15,35 +15,41 @@ void Game::start()
     int choice = 0;
 
     do {
-        clearScreen();
-        cout << "Tower Defense" << endl << endl;
+        attron(A_BOLD);
+        move(0, 0);
+        printw("Tower Defense\n\n");
+        attroff(A_BOLD);
         if (currentLevel == NULL) {
             int levelsCount = levels.size();
+            printw("Choose option:\n");
             for (int i = 0; i < levelsCount; i++) {
-                cout << (i + 1) << ". Begin " << levels[i].getName() << endl;
+                printw("%3d - Begin %s\n", i + 1, levels[i].getName().c_str());
             }
-            cout << "0. Exit" << endl << endl;
-            cout << "Choose option: ";
-            cin >> choice;
+            printw("Esc - Exit\n");
+            choice = getch();
             switch (choice) {
-                case 0:
-                    cout << "Exiting." << endl;
+                case 27:
+                    choice = 0;
                     break;
                 default:
+                    choice = choice - 48;
                     if (choice > 0 && choice <= levelsCount) {
                         setCurrentLevel(&levels[choice - 1]);
+                        halfdelay(5);
+                        clear();
                     }
                     break;
             }
         } else {
-            cout << getCurrentLevel()->toString() << endl << endl;
-            cout << "0. Back to level choice" << endl << endl;
-            cout << "Choose option: ";
-            cin >> choice;
+            printw("Esc - Return to menu\n\n");
+            currentLevel->draw();
+            choice = getch();
             switch (choice) {
-                case 0:
+                case 27:
                     setCurrentLevel(NULL);
+                    halfdelay(255);
                     choice = -1;
+                    clear();
                     break;
             }
         }

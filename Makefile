@@ -19,7 +19,7 @@ SRCDIR=src
 TARGET=$(BINDIR)/td
 
 # settings
-CXXFLAGS=-g
+CXXFLAGS=-g -lncurses
 SOURCES=$(SRCDIR)/*.cpp
 
 all: $(TARGET)

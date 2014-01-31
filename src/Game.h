@@ -7,6 +7,7 @@
 #ifndef __CLI_H_
 #define __CLI_H_
 
+#include "ncurses.h"
 #include <vector>
 #include "Level.h"
 
